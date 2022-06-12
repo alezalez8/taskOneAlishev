@@ -1,5 +1,9 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Library</h2>
+
+<a href="people">Go to persons</a>
+<br/>
+<a href="books">Go to books</a>
 </body>
 </html>
