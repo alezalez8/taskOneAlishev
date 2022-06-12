@@ -8,9 +8,9 @@
 
 <p th:text="${book.getBookName() + ',   ' + book.getAuthor() + ', ' + book.getYear()}">VALUE</p>
 
-<a th:href="@{/book/{id}/edit(id=${book.getId()})}">Редактировать</a>
+<a th:href="@{/books/{id}/edit(id=${book.getId()})}">Редактировать</a>
 
-<form th:method="DELETE" th:action="@{/book/{id}(id=${book.getId()})}">
+<form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
     <input type="submit" value="Удалить"/>
 </form>
 </body>
