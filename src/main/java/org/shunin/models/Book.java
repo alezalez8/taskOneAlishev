@@ -9,6 +9,7 @@ public class Book {
 
     private int id;
 
+
     @NotEmpty(message = "Название книги не может быть пустым")
     @Size(min = 3, max = 100, message = "Длина названия книги должна быть в диапазоне от 3 до 100 символов")
     private String bookName;
@@ -30,7 +31,10 @@ public class Book {
         this.bookName = bookName;
         this.author = author;
         this.year = year;
+
     }
+
+
 
     public int getId() {
         return id;

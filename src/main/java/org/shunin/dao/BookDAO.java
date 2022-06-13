@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,6 +55,12 @@ public class BookDAO {
     public Optional<Book> show1(int id) {
         return jdbcTemplate.query("SELECT * FROM Book WHERE id=?",
                 new Object[]{id}, new BeanPropertyRowMapper<>(Book.class)).stream().findAny();
+    }
+
+    public List<Book> getList(int id) {  // id = fk, user_id
+        return jdbcTemplate.query("SELECT * FROM Book WHERE user_id=?",
+                new Object[]{id}, new BeanPropertyRowMapper<>(Book.class));
+
     }
 //=======================================================
 
